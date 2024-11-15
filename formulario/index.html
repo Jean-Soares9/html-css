@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aqui você encontra conteúdos....">
+    <meta name="keywords" content="jogos, games playstation, xbox, nintendo,...">
+    <title>Games</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="interface">
+        <header class="topo">
+            <img src="img/logo.png" alt="Logo controle de video game">
+
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            Contatos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="fotos.html">
+                            Fotos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="midias.html">
+                            Mídias
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner_anime">
+            <img src="img/banner1.jpg" alt="Jogo GOD OF WAR" title="Kratos" id="anime1">
+            <img src="img/banner2.jpg" alt="Jogo GOD OF WAR" title="Kratos" id="anime2">
+        </div>
+
+        <h1>Entre em contato conosco</h1>
+
+        <form action="mailto:guilherme.hjoli@gmail.com" method="post" id="contato">
+
+            <fieldset class="usuario"><!--comj de campos-->
+                <legend>identificação do usuario</legend>
+                <p>
+                    <label for="cnome">nome</label>
+                    <input type="text" name="nome" id="cnome" size="30" maxlength="50" placeholder="nome completo"
+                        required autofocus>
+                </p>
+                <p>
+                    <label for="cmail">email</label>
+                    <input type="email" name="email" id="cmail" size="30" maxlength="50" placeholder="digite seu email"
+                        required autofocus>
+                </p>
+                <p>
+                    <label for="senha">senha</label>
+                    <input type="password" name="senha" id="senha" size="8" maxlength="8" placeholder="8 digitos"
+                        required autofocus>
+                </p>
+
+                <fieldset class="sexo">
+                    <legend>sexo</legend>
+                    <p>
+                        <input type="radio" name="sexo" id="cfem">
+                        <label for="cfem">feminino</label>
+                    </p>
+                    <input type="radio" name="sexo" id="cmasc">
+                    <label for="cmasc">masculino</label>
+                    <p>
+                        <input type="radio" name="sexo" id="coutr">
+                        <label for="coutr">outros</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="cnasc">Data de nascimento</label>
+                    <input type="date" name="nasc" id="cnasc">
+                </p>
+            </fieldset>
+
+            <fieldset class="endereco">
+                <p>
+                    <legend>endereço do usuario</legend>
+                    <label for="crua">logradouro</label>
+                    <input type="text" name="rua" id="crua" size="50" maxlength="50" placeholder="Rua, Av, Trav....">
+                </p>
+
+                <p>
+                    <label for="cnum">numero</label>
+                    <input type="number" name="num" id="cnum" min="0" max="99999">
+                </p>
+
+                <p>
+                    <label for="cest">estado</label>
+                    <select name="est" id="cest">
+
+                        <optgroup label="regiao sudeste">
+                            <option value="SP">São paulo</option>
+                            <option value="RJ">Rio de janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espirito Santo</option>
+                        </optgroup>
+
+                        <optgroup label="Região Sul">
+                            <option value="SC">Santa catarina</option>
+                            <option value="RS">Rio Grande do sul</option>
+                            <option value="PR">Parana</option>
+                        </optgroup>
+                        <select>
+                </p>
+
+                <p>
+                    <label for="ccid">cidade</label>
+                    <input type="text" name="cid" id="ccid" size="40" maxlength="40" placeholder="sua cidade">
+                </p>
+            </fieldset>
+
+            <fieldset class="mensagem">
+                <legend>mensagem do usuario</legend>
+                <p>
+                    <label for="curg">Grau de Urgência</label>
+                    Min <input type="range" name="urg" min="0" max="10" step="1"> Máx
+                </p>
+
+                <p>
+                    <label for="cmsg">Mensagem</label>
+                </p>
+                <p>
+                    <textarea name="msg" id="msg" cols="70" rows="7" placeholder="Digite sua mensagem aqui..."
+                        required></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset class="pedido">
+                <legend>Quero um console</legend>
+                <p>
+                    <input type="checkbox" name="ped" id="cped">
+                    <label for="cped">Gostaria de adquirir um console disponivel</label>
+                </p>
+
+                <p>
+                    <label for="cron">Console</label>
+                    <select name="game" id="ccon">
+                        <option value="PS">Playstation</option>
+                        <option value="XBOX">xbox</option>
+                        <option value="NES">Nitendo</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="ccor">Cor</label>
+                    <input type="color" name="cor" id="ccor" value="#000">
+                </p>
+
+                <p>
+                    <label for="cqtde">Quantidade</label>
+                    <input type="number" name="qtde" id="cqtde" min="0" max="S" value="0" oninput="calc_total()">
+                </p>
+
+                <P>
+                    <label for="ctot">Preço Total: R$</label>
+                    <input type="text" name="tot" id="ctot" placeholder="Total a pagar" readonly>
+                </P>
+            </fieldset>
+
+            <button type="submit" name="enviar" class="btn">Enviar</button>
+            <button type="reset" name="limpar" class="btn">Limpar</button>
+        </form>
+
+        <footer id="rodape">
+            <p>
+                Somente para fins educativos
+            </p>
+
+            <p>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Rede social instagram"></a>
+                <a href="https://pt-br.facebook.com/" target="_blank"><img src="img/facebook.png" alt="Rede social facebook"></a>
+                <a href="https://x.com/?mx=2" target="_blank"><img src="img/x_twitter.png" alt="Rede social x_twitter"></a>
+                <a href="https://github.com/Martinsos/arduino-lib-hc-sr04" target="_blank"><img src="img/github.png" alt="Rede social github"></a>
+                <a href="https://www.youtube.com/youtube" target="_blank"><img src="img/youtube.png" alt="Rede social youtube"></a>
+                <a href="https://br.linkedin.com/?original_referer=https%3A%2F%2Fwww.bing.com%2F" target="_blank"><img src="img/linkedin.png" alt="Rede social linkedin"></a>
+            </p>
+        </footer>
+    </div>
+    <script src="funcoes.js"></script>
+</body>
+
+</html>

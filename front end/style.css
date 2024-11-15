@@ -1,0 +1,64 @@
+@charset "UTF-8"
+
+/*Fontes Externas*/
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');/*Titulo*/
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap'); /*Corpo*/
+
+/*Váriaveis CSS*/
+
+:root{
+    --cor1: #F0FFFF;
+    --cor2: #808080;
+    --cor3: #000000;
+    --cor4: #ad1f2b;
+    --cor5: #4682B4;
+    --cor6: #3CB371;
+
+    --titulo: 'Birthstone, sans-serif';
+    --texto: 'Mr Dafoe, sans-serif';
+}
+
+/* Reset CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #00a2ff;
+}
+
+/*Layout*/
+
+.container{
+    display: flex;
+}
+
+/*SMARTPHONE PORTRAIT*/
+
+/*SMARTPHONE LANDSCAPE*/
+@media (min-width:576px) {
+    body{
+        background: #e98903;
+    }
+}
+/*TABLET PORTRAIT*/
+@media (min-width:768px) {
+    body{
+        background: #e7e706;
+    }
+}
+/*TABLET LANDSCAPE*/
+@media (min-width:992px) {
+    body{
+        background: #15c005;
+    }
+}
+/*PC*/
+@media (min-width:1200px) {
+    body{
+        background: #0a7fc7;
+    }
+}
