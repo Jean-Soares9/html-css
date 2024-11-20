@@ -33,15 +33,72 @@ body{
 /*Layout*/
 
 .container{
+    margin: 0 auto;
+    background: #808080;
+}
+
+#topo{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.flex{
     display: flex;
+    justify-content: space-between;
+    background: #15c005;
 }
 
 /*SMARTPHONE PORTRAIT*/
+header{
+    height: 60px;
+}
+
+#check{
+    display: none;
+}
+
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+}
+
+nav ul{
+    list-style: none;
+    background: var(--cor4);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: var(--cor1) 1px solid;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--cor5);
+    font-family: var(--texto);
+    font-size: 1.3em;
+}
+
+#check:checked ~ ul{
+    right: 0;
+}
 
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width:576px) {
     body{
         background: #e98903;
+    }
+    .container{
+        max-width: 540px;
     }
 }
 /*TABLET PORTRAIT*/
@@ -49,16 +106,33 @@ body{
     body{
         background: #e7e706;
     }
+    .container{
+        max-width: 720px;
+    }
 }
 /*TABLET LANDSCAPE*/
 @media (min-width:992px) {
     body{
         background: #15c005;
     }
+    .container{
+        max-width: 960px;
+    }
 }
 /*PC*/
 @media (min-width:1200px) {
     body{
         background: #0a7fc7;
+    }
+    .container{
+        max-width: 1140px;
+    }
+    /*Cabeçalho*/
+    header{
+        height: 125px;
+    }
+    .logo img{
+        margin-top: 30px;
+        margin-left: 30px;
     }
 }
