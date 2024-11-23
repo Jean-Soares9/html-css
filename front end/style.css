@@ -1,12 +1,14 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 /*Fontes Externas*/
-@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');/*Titulo*/
-@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap'); /*Corpo*/
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+/*Titulo*/
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+/*Corpo*/
 
 /*Váriaveis CSS*/
 
-:root{
+:root {
     --cor1: #F0FFFF;
     --cor2: #808080;
     --cor3: #000000;
@@ -20,54 +22,66 @@
 
 /* Reset CSS*/
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: #00a2ff;
+body {
+    background: #f5f7f8;
 }
 
 /*Layout*/
 
-.container{
+.container {
     margin: 0 auto;
-    background: #808080;
+    /*background: #808080;*/
 }
 
-#topo{
+#topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
 }
 
-.flex{
+.botao {
+    text-decoration: none;
+    color: var(--cor1);
+    font-size: 1.3em;
+    font-weight: 700;
+    background: var(--cor3);
+    border: 3px solid var(--cor1);
+    border-radius: 25px;
+    padding: 10px 40px;
+}
+
+.flex {
     display: flex;
     justify-content: space-between;
-    background: #15c005;
+
 }
 
 /*SMARTPHONE PORTRAIT*/
-header{
+header {
     height: 60px;
+    background: var(--cor1);
 }
 
-#check{
+#check {
     display: none;
 }
 
-label{
+label {
     font-size: 3em;
     position: fixed;
     top: 5px;
     right: 15px;
 }
 
-nav ul{
+nav ul {
     list-style: none;
-    background: var(--cor4);
+    background: var(--cor5);
     height: 100vh;
     position: fixed;
     top: 60px;
@@ -76,63 +90,150 @@ nav ul{
     transition: all 0.5s;
 }
 
-nav ul li{
+nav ul li {
     padding: 20px;
-    border-bottom: var(--cor1) 1px solid;
+    border-bottom: var(--cor3) 1px solid;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: var(--cor5);
+    color: var(--cor3);
     font-family: var(--texto);
     font-size: 1.3em;
 }
 
-#check:checked ~ ul{
+#check:checked~ul {
     right: 0;
+}
+
+/*Destaque*/
+main {
+    height: 75vh;
+    background: url(img/banner_front.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--cor3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--titulo);
+}
+
+main h1 {
+    font-size: 3em;
+}
+
+main h2 {
+    font-size: 1.5em;
+    margin: 20px 0px 50px 0px;
 }
 
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width:576px) {
-    body{
+
+    /* body{
         background: #e98903;
-    }
-    .container{
+    }*/
+    .container {
         max-width: 540px;
     }
+
+    label {
+        right: 65px;
+    }
+
+    /*Destaque*/
+    main h1, main h2{
+        text-shadow: var(--cor5) 0.1em 0.1em 0.3em;
+    }
 }
+
 /*TABLET PORTRAIT*/
 @media (min-width:768px) {
-    body{
+
+    /*body{
         background: #e7e706;
-    }
-    .container{
+    }*/
+    .container {
         max-width: 720px;
     }
+
+    label {
+        right: 35px;
+    }
+
+    main{
+        height: 45vh;
+    }
+
+    main h1{
+        font-size: 5em;
+    }
+
+    main h2{
+        font-size: 2em;
+    }
 }
+
 /*TABLET LANDSCAPE*/
 @media (min-width:992px) {
-    body{
+
+    /*body{
         background: #15c005;
-    }
-    .container{
+    }*/
+    .container {
         max-width: 960px;
     }
+
+    /*Destaque*/
+    main{
+        height: 70vh;
+    }
 }
+
 /*PC*/
 @media (min-width:1200px) {
-    body{
+
+    /*body{
         background: #0a7fc7;
-    }
-    .container{
+    }*/
+    .container {
         max-width: 1140px;
     }
-    /*Cabeçalho*/
-    header{
+
+/*Cabeçalho*/
+    header {
         height: 125px;
     }
-    .logo img{
+
+    .logo img {
         margin-top: 30px;
         margin-left: 30px;
     }
+
+    label {
+        display: none;
+    }
+    
+    nav ul {
+        position: static;
+        height: auto;
+        background: transparent;
+        margin-top: 50px;
+    }
+    
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+    
+    nav ul li a {
+        color: var(--cor5);
+    }
+    
+    nav ul li a:hover {
+        color: #c41010;
+    }
 }
+
