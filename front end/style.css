@@ -62,6 +62,16 @@ body {
 
 }
 
+.flex2{
+    display: flex;
+    align-items: center;
+}
+
+.flex3{
+    display: flex;
+    flex-direction: column;
+}
+
 /*SMARTPHONE PORTRAIT*/
 header {
     height: 60px;
@@ -129,6 +139,58 @@ main h2 {
     margin: 20px 0px 50px 0px;
 }
 
+/*Sobre*/
+#sobre{
+    background: url(img/background5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;
+}
+
+.destaque_sobre{
+    display: none;
+}
+.texto_sobre{
+    color: var(--cor5);
+    padding: 0px 10px;
+    font-family: var(--texto);
+}
+.texto_sobre h2{
+    margin-bottom: 10px;
+    font-family: var(--titulo);
+    font-size: 2em;
+}
+.texto_sobre p{
+    font-size: 1.3em;
+
+}
+.topico_sobre{
+    margin-top: 20px;
+}
+.topico_sobre img{
+    margin-right: 10px;
+}
+
+/*One Page*/
+#onepage{
+    padding: 50px 10px;
+}
+#onepage h2{
+    font-family: var(--titulo);
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+#onepage p{
+    font-family: var(--texto);
+    margin-bottom: 25px;
+    font-size: 1.4em;
+}
+.video iframe{
+    width: 340px;
+    height: 250px;
+}
+
+
 /*SMARTPHONE LANDSCAPE*/
 @media (min-width:576px) {
 
@@ -146,6 +208,11 @@ main h2 {
     /*Destaque*/
     main h1, main h2{
         text-shadow: var(--cor5) 0.1em 0.1em 0.3em;
+    }
+    /*One Page*/
+    .video iframe{
+        width: 560px;
+        height: 315px;
     }
 }
 
@@ -173,6 +240,14 @@ main h2 {
 
     main h2{
         font-size: 2em;
+    }
+
+    /*Sobre*/
+    .texto_sobre h2{
+        font-size: 2.8em;
+    }
+    .texto_sobre p{
+        font-size: 1.8em;
     }
 }
 
@@ -234,6 +309,24 @@ main h2 {
     
     nav ul li a:hover {
         color: #c41010;
+    }
+
+    /*Sobre*/
+    .destaque_sobre{
+        display: inline;
+    }
+    .destaque_sobre img{
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+    #sobre{
+        background-attachment: fixed; /*efeito parallax*/
+    }
+
+    /*One Page*/
+    .flex3{
+        flex-direction: row;
+        align-items: center;
     }
 }
 
